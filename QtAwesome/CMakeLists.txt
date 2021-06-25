@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.9)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
 project(QtAwesome VERSION 4.7.1)
 
