@@ -32,21 +32,42 @@ Just integers it is. Simpler is better.
 
 Installation
 ------------
+You can browse the original [repo](https://github.com/gamecreature/QtAwesome)  to use in your Qmake based Qt project. 
 
-The easiest way to include QtAweome in your project is to copy the QtAwesome directory to your
-project tree and add the following `include()` to your Qt project file:
+If you want to use it in your Cmake based Qt project like me, download and compile the files.
 
-    include(QtAwesome/QtAwesome.pri)
+`cd ~/Downloads/QtAwesome-master`
 
-Now you are good to go!
+`mkdir build && cd build`
+
+`cmake ..`
+
+`make`
+
+`make install`
 
 
 Usage
 -----
 
+Find the library in CMakeLists.txt;
+
+`find_library(QtAwesome /usr/local/lib)`
+
+Finally, link it with your project;
+
+`target_link_libraries(${PROJECT_NAME} PRIVATE QtAwesome)`
+
+
 You probably want to create a single QtAwesome object for your whole application:
 
 ````
+    #include <QtAwesome.h>
+    
+    .
+    .
+    .
+
     QtAwesome* awesome = new QtAwesome( qApp )
     awesome->initFontAwesome();     // This line is important as it loads the font and initializes the named icon map
 

@@ -7,8 +7,8 @@
  * Author Rick Blommers
  */
 
-#include "QtAwesome.h"
-#include "QtAwesomeAnim.h"
+#include "include/QtAwesome.h"
+#include "include/QtAwesomeAnim.h"
 
 #include <QDebug>
 #include <QFile>
